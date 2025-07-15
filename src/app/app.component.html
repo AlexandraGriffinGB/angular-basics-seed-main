@@ -1,0 +1,12 @@
+<main>
+  <header>
+    <div class="app">
+      <!-- this is better than [inner Text]-->
+      <h1 (click)="handleClick($event)">{{ newMessage }}</h1>
+      <label title="aaa">Label
+        <input [value]="message" (input)="newMessage = messageInput.value" #messageInput>
+        <p>{{ messageInput.value }}</p>
+      </label>
+    </div>
+  </header>
+</main>
