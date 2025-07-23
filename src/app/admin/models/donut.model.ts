@@ -3,5 +3,7 @@ export interface Donut {
   name: string;
   icon: string;
   price: number;
+  // ? = optional
+  promo?: boolean;
   description: string;
 }

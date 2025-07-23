@@ -10,5 +10,4 @@ import { AdminModule } from './admin/admin.module';
   imports: [BrowserModule, AdminModule],
   bootstrap: [AppComponent],
 })
-
 export class AppModule {}
