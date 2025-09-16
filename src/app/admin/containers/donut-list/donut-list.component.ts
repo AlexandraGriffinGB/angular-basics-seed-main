@@ -18,6 +18,7 @@ export class DonutListComponent implements OnInit {
         name: 'Just Chocolate',
         icon: 'just-chocolate',
         price: 119,
+        promo: 'limited',
         description: 'For the chocolate enthusiast',
       },
       {
@@ -25,7 +26,7 @@ export class DonutListComponent implements OnInit {
         name: 'Glazed Fudge',
         icon: 'glazed-fudge',
         price: 129,
-        promo: true,
+        promo: 'new',
         description: 'For the fudgy self',
       },
       {
@@ -35,6 +36,24 @@ export class DonutListComponent implements OnInit {
         price: 119,
         description: 'Caramel orgasm',
       },
+      {
+        id: '0004',
+        name: 'Sour Supreme',
+        icon: 'sour-supreme',
+        price: 139,
+        description: 'For the sour advocate.',
+      },
+      {
+        id: '0005',
+        name: 'Zesty Lemon',
+        icon: 'zesty-lemon',
+        price: 169,
+        description: 'When life gives you lemons, make some lemon donut!',
+      },
     ];
+  }
+
+  trackById(index: number, value: Donut) {
+    return value.id;
   }
 }

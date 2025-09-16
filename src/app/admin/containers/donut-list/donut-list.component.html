@@ -1,5 +1,25 @@
 <div>
-  <donut-card [donut]="donuts[0]"></donut-card>
-  <donut-card [donut]="donuts[1]"></donut-card>
-  <donut-card [donut]="donuts[2]"></donut-card>
+  <!-- either renders the card or if no data is present the else container
+   Note: Those are "Virtual Elements" so they only get rendered when called upon
+   The ngIf does Property Binding and templeate creation at the same time-->
+  <ng-container *ngIf="donuts.length; else nothing"> </ng-container>
+
+  <donut-card *ngFor="let donut of donuts; trackBy: trackById" [donut]="donut">
+  </donut-card>
+  <!-- <div
+      *ngFor="let donut of donuts; index as i; odd as o; even as e"
+      [style.color]="o ? 'red' : 'blue'"
+    >
+      {{ i + 1 }}
+      {{ o }}
+      {{ e }}
+    </div> -->
+  <!-- same aproach as on the top but this is the rendered version of the *ngIf-->
+  <!-- <ng-template ngFor [ngForOf]="donuts" let-donut let-i="index">
+    <donut-card [donut]="donut"> </donut-card>
+  </ng-template> -->
+
+  <ng-template #nothing>
+    <p>No Donuts in stock...</p>
+  </ng-template>
 </div>
