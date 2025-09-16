@@ -50,6 +50,22 @@ export class DonutListComponent implements OnInit {
         price: 169,
         description: 'When life gives you lemons, make some lemon donut!',
       },
+      {
+        id: '0006',
+        name: 'Oreo Donut',
+        icon: 'oreo-donut',
+        price: 200,
+        promo: 'limited',
+        description: 'Delicious donut with oreo cookies crumble.',
+      },
+      {
+        id: '0007',
+        name: 'Orange Glazed',
+        icon: 'orange-glazed',
+        price: 130,
+        promo: 'new',
+        description: 'Fresh orange glazed donut with a citrus twist.',
+      },
     ];
   }
 
